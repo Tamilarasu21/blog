@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width:none;
+}
+
+::-webkit-scrollbar{
+  width: 0 !important;
+  display:none;
+}
+.install-form {
+  background: rgb(206, 199, 199);
+  padding: -5px;
+  padding-bottom: 5px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.install-form input {
+  border-radius: 3px;
+}
+/* validaion start */
+.modal .form-group input:invalid:required {
+  outline: 0 !important;
+  border: 1px solid #a5a2a1;
+  box-shadow: none;
+}
+.modal .form-group input:invalid:focus {
+  outline: 0 !important;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 4px red;
+  box-shadow: 0 0 4px red;
+}
+.modal .form-group input:valid {
+  outline: 0 !important;
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 4px green;
+  box-shadow: 0 0 4px green;
+}
+.contact .form-group input:invalid:required {
+  outline: 0 !important;
+  border: 1px solid  #a5a2a1;
+  box-shadow: none;
+}
+.contact .form-group input:invalid:focus {
+  outline: 0 !important;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 4px red;
+  box-shadow: 0 0 4px red;
+}
+.contact .form-group textarea:invalid:required{
+  outline: 0 !important;
+  border: 1px solid  #a5a2a1;
+  box-shadow: none;
+}
+.contact .form-group textarea:invalid:focus {
+  outline: 0 !important;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 4px red;
+  box-shadow: 0 0 4px red;
+}
+.contact .form-group textarea:valid {
+  outline: 0 !important;
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 4px green;
+  box-shadow: 0 0 4px green;
+}
+.contact .form-group input:valid {
+  outline: 0 !important;
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 4px green;
+  box-shadow: 0 0 4px green;
+}
+/* validaion ends */
+/* contents */
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 768px) {
+  body,
+  p {
+    font-size: 12px;
+  }
+}
+/* contents ends */
+/* header and footer */
+.primary-nav {
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+}
+.shrink {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 45px !important;
+}
+.shrink .navbar-brand img{
+  height:40px !important;
+  width:40px !important;
+  line-height: 20 !important;
+}
+.shrink a {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;       
+}
+main{
+  margin-top:100px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.navbar-dark{
+  background-color:rgb(50, 90, 150);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.navbar-dark .navbar-collapse .navbar-nav .nav-item .nav-link
+{
+  color:white;
+  margin-left:15px;
+  margin-right:15px;
+  font-size:16px;
+  font-weight:500;
+}
+.navbar-dark .navbar-collapse .navbar-nav .nav-item:hover .nav-link{
+  /* background-color: gainsboro; */
+  color:gainsboro;
+}
+.navbar-dark .navbar-collapse .navbar-nav .active .nav-link{
+  color:gainsboro;
+  cursor: text;
+}
+.primary-nav .hamburger .hamburger-icon
+{
+  color:white !important;
+}
+.close-icon{
+  font-size:25px;
+  color:white;
+}
+.navbar-toggler-icon{
+  color:white
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+}
+@media (min-width:767px)
+{
+  .navbar-nav > li {
+    float: left;
+    position: relative;
+  }
+  .navbar-dark .navbar-nav .active a::after {
+    border-top: 5px solid gainsboro;
+    top: -8px;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+/* hide close when burger shown */
+.navbar-toggler.collapsed .close-icon {
+    display: none;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    display: inline;
+}
+@media (max-width: 480px) {
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left:0;
+    right:0;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  footer {
+    z-index:999 !important;
+    position: -webkit-sticky;
+    bottom: 0;
+    left: 0;
+  }
+  header .shrink .navbar-collapse .navbar-nav li{
+    margin-top:15px;
+    margin-bottom:15px
+  }
+  #carouselExampleControls
+  {
+    display:none;
+  }
+  main .content img
+{
+  width:100%;
+  height:60%
+}
+}
+
+@media (max-width: 768px) {
+  #footer1 {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #footer2 {
+    display: none;
+  }
+  #team
+{
+  display:none;
+}
+}
+/* header and footer ends */
+
