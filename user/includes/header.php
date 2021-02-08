@@ -1,14 +1,13 @@
 <?php
 include_once "../config.php";
-$sql="select * from user where role='0' and email='".$_SESSION['email']."'";
-$run=mysqli_query($con, $sql);
-while($row=mysqli_fetch_assoc($run))
-{
-  $fname=$row["firstname"];
-  $lname=$row["lastname"];
-  $email=$row["email"];
-  $uname=$row["firstname"]." ".$row["lastname"];
-  $pass=md5($row["password"]);
+$sql = "select * from user where role='0' and email='" . $_SESSION['email'] . "'";
+$run = mysqli_query($con, $sql);
+while ($row = mysqli_fetch_assoc($run)) {
+  $fname = $row["firstname"];
+  $lname = $row["lastname"];
+  $email = $row["email"];
+  $uname = $row["firstname"] . " " . $row["lastname"];
+  $pass = md5($row["password"]);
 }
 ?>
 <!DOCTYPE html>
@@ -71,3 +70,43 @@ while($row=mysqli_fetch_assoc($run))
     </nav>
   </header>
   <main class="mt-5 pt-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <?php
+        $Url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        if (strpos($Url, "signin=success") == true) {
+          echo '<div class="alert alert-success alert-dismissible text-center">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                <strong>Welcome ' . ucwords($uname) . '</strong></div>';
+        } else if (strpos($Url, "update=success") == true) {
+          echo '<div class="alert alert-success alert-dismissible text-center">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                <strong>Profile changed successfully</strong></div>';
+        } else if (strpos($Url, "update=failed") == true) {
+          echo '<div class="alert alert-danger alert-dismissible text-center">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                      <strong>Failed To Update</strong></div>';
+        } else if (strpos($Url, "oldpass=false") == true) {
+          echo '<div class="alert alert-danger alert-dismissible text-center">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                      <strong>Passwords did not match</strong></div>';
+        }else if (strpos($Url, "created") == true) {
+          echo '<div class="alert alert-success alert-dismissible text-center">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                      <strong>Post created</strong></div>';
+        }else if (strpos($Url, "failed") == true) {
+          echo '<div class="alert alert-danger alert-dismissible text-center">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                      <strong>Post not created</strong></div>';
+        }else if (strpos($Url, "edited") == true) {
+          echo '<div class="alert alert-success alert-dismissible text-center">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                      <strong>Post Edited</strong></div>';
+        }else if (strpos($Url, "update=success") == true) {
+          echo '<div class="alert alert-success alert-dismissible text-center">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                      <strong>Image Edited</strong></div>';
+        }
+        ?>
+      </div>
+    </div>

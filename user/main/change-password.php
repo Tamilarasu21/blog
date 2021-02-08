@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once "../config.php";
+    include_once "../../config.php";
     $sql="select * from user where email='".$_SESSION['email']."'";
     $run=mysqli_query($con, $sql);
     while($row=mysqli_fetch_assoc($run))
@@ -19,13 +19,13 @@
             if($npass==$cnpass){
                 $query="update user set password='".$cnpass."' where email='".$_SESSION["email"]."'";
                 $rep=mysqli_query($con, $query);
-                if($rep==TRUE){
-                    header("Location:password.php?password=true");
+                if($rep){
+                    header("Location:../../index.php?password=true");
                 }
             }
         }
         else{
-            header("Location:password.php?oldpass=false");
+            header("Location:../password.php?oldpass=false");
         }
     }
 ?>

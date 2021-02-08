@@ -1,6 +1,5 @@
   <?php include_once "includes/header.php"; ?>
   <!-- content start -->
-  <main>
     <div class="container" style="z-index:-1;position:relative;margin-top:-20px">
       <h3 class="text-center font-weight-bold">About</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore repellendus voluptas, quas officiis maxime fugit magnam accusantium quos molestiae, ipsam explicabo ducimus? Perspiciatis, minus corrupti!</p>

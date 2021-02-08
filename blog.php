@@ -1,5 +1,4 @@
 <?php include_once "includes/header.php"; ?>
-<main>
     <div class="container">
         <?php
         include_once "config.php";

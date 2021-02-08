@@ -91,7 +91,7 @@
             </div>
         </div>
         <div class="modal-footer mx-auto">
-            <input class="btn btn-primary rounded-0" type="submit" name="signup" value="Sign up">
+          <input class="btn btn-primary rounded-0" type="submit" name="signup" value="Sign up">
           </form>
         </div>
       </div>
@@ -123,10 +123,37 @@
             </div>
         </div>
         <div class="modal-footer mx-auto">
-            <button class="btn btn-primary rounded-0" type="submit" name="signin">Sign in</button>
+          <button class="btn btn-primary rounded-0" type="submit" name="signin">Sign in</button>
           </form>
         </div>
       </div>
     </div>
   </div>
   <!-- modal signin end -->
+  <main>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <?php
+          $Url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+          if (strpos($Url, "signup=success") == true) {
+            echo '<div class="alert alert-success alert-dismissible text-center">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                <strong>You are successfully regisered</strong></div>';
+          } elseif (strpos($Url, "signup=failure") == true) {
+            echo '<div class="alert alert-danger alert-dismissible text-center">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                <strong>Please fill all the fields!</strong></div>';
+          } elseif (strpos($Url, "signin=failure") == true) {
+            echo '<div class="alert alert-danger alert-dismissible text-center">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                <strong>Please check your fields!</strong></div>';
+          } elseif (strpos($Url, "password=true") == true) {
+            echo '<div class="alert alert-success alert-dismissible text-center">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="fa fa-times-circle-o"></i></a>
+                <strong>Password changed successfully</strong></div>';
+          }
+          ?>
+        </div>
+      </div>
+    </div>

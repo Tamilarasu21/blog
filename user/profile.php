@@ -3,18 +3,6 @@ session_start();
 include_once "../config.php";
 include_once "includes/header.php";
 ?>
-<?php
-$Url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-if (strpos($Url, "update=success") == true) {
-    echo '<div class="alert alert-success alert-dismissible text-center col-md-4 col-md-offset-4">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Updated Successfully</strong></div>';
-} else if (strpos($Url, "update=failed") == true) {
-    echo '<div class="alert alert-danger alert-dismissible text-center col-md-4 col-md-offset-4">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Failed To Update</strong></div>';
-}
-?>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5">

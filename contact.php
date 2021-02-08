@@ -1,7 +1,6 @@
 <?php include_once "includes/header.php"; ?>
 
 <!-- content start -->
-<main>
   <div class="container mt-5" style="z-index: 0;">
     <div class="row mt-5 mb-3">
       <div class="col-md-6">

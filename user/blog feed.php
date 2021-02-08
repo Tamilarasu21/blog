@@ -6,6 +6,9 @@ $sql = "select * from blog";
 $rn = mysqli_query($con, $sql);
 foreach ($rn as $row) { ?>
     <div class="container">
+        <ul id="social_side_links" style="list-style:none;position: fixed;top: 500px;right: 30px;padding: 0;z-index: 999;">
+            <li><a style="background-color: #2980b9;border-radius: 50%;display: block;text-decoration: none;width: 50px;text-align: center;height: 50px;" href="add blog.php"><i class="fa fa-plus fa-2x" style="display: block;color:white;padding: 10px"></i></a></li>
+        </ul>
         <div class="row featurette">
             <div class="col-md-7">
                 <a href="details.php?id=<?php echo $row["id"] ?>" class="text-decoration-none">
