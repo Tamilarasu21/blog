@@ -79,7 +79,7 @@ if (isset($_GET["id"])); {
                         <div class="modal-header">
                             <div class="modal-title w-100 text-center"><img src="assets/logo.png" alt="" class="img-circle" width="50px" height="50px"><br>Signup</div>
                             <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true"><i class="fa fa-times-circle"></i></span>
                             </button>
                         </div>
                         <div class="modal-body">
@@ -122,7 +122,7 @@ if (isset($_GET["id"])); {
                         <div class="modal-header">
                             <div class="modal-title w-100 text-center"><img src="assets/logo.png" alt="" class="img-circle" width="50px" height="50px"><br>Signin</div>
                             <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true"><i class="fa fa-times-circle"></i></span>
                             </button>
                         </div>
                         <div class="modal-body">

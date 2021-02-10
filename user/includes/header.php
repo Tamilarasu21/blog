@@ -46,7 +46,7 @@ while ($row = mysqli_fetch_assoc($run)) {
                                 } ?>">
               <a class="nav-link" href="blog feed.php">Feed</a>
             </li>
-            <li class="nav-item <?php if (basename($_SERVER['SCRIPT_FILENAME']) == 'my blogs.php' || basename($_SERVER['SCRIPT_FILENAME']) == 'details.php' || basename($_SERVER['SCRIPT_FILENAME']) == 'add blog.php') {
+            <li class="nav-item <?php if (basename($_SERVER['SCRIPT_FILENAME']) == 'my blogs.php' || basename($_SERVER['SCRIPT_FILENAME']) == 'add blog.php') {
                                   echo 'active';
                                 } ?>">
               <a class="nav-link" href="my blogs.php">My Blogs</a>

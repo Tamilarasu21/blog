@@ -2,7 +2,14 @@
 session_start();
 include_once "../config.php";
 include_once "includes/header.php";
-$sql = "select * from blog";
+$email = $_SESSION['email'];
+$s = "select * from user where email='" . $email . "'";
+$r = mysqli_query($con, $s);
+foreach ($r as $w) {
+    $uname = ucwords($w["firstname"] . " " . $w["lastname"]);
+}
+
+$sql = "select * from blog where uploaded_by !='" . $uname . "'";
 $rn = mysqli_query($con, $sql);
 foreach ($rn as $row) { ?>
     <div class="container">

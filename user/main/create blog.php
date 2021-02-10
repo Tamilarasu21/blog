@@ -15,7 +15,7 @@ if(isset($_POST["post"]))
     $image=$_FILES["image"]["name"];
     $timage=$_FILES["image"]["tmp_name"];
     $nimage=uniqid().".".$image;
-    $target="../../blog/images/".$nimage;
+$target="../../blog/images/".$nimage;
 
     move_uploaded_file($timage, $target);
 
