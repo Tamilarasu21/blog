@@ -50,10 +50,10 @@ if (isset($_GET["id"])); {
                                                     } ?>">
                                     <a class="nav-link" href="about.php">About</a>
                                 </li>
-                                <li class="nav-item <?php if (basename($_SERVER['SCRIPT_FILENAME']) == 'blog.php' || basename($_SERVER['SCRIPT_FILENAME']) == 'details.php') {
+                                <li class="nav-item <?php if (basename($_SERVER['SCRIPT_FILENAME']) == 'blogs.php' || basename($_SERVER['SCRIPT_FILENAME']) == 'details.php') {
                                                         echo 'active';
                                                     } ?>">
-                                    <a class="nav-link" href="blog.php">Blog</a>
+                                    <a class="nav-link" href="blogs.php">Blog</a>
                                 </li>
                                 <li class="nav-item <?php if (basename($_SERVER['SCRIPT_FILENAME']) == 'contact.php') {
                                                         echo 'active';

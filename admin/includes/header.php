@@ -21,9 +21,9 @@ while ($row = mysqli_fetch_assoc($run)) {
   <meta name="description" content="admin-panel" />
   <meta name="author" content="Tamilarasu A" />
   <title><?php echo ucwords(basename($_SERVER['SCRIPT_FILENAME'], ".php")); ?></title>
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
-  <link href="../css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body style="background:snow;">

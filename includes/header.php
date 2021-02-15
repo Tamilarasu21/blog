@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo ucwords(basename($_SERVER['SCRIPT_FILENAME'], ".php")); ?></title>
   <meta name="author" content="Tamilarasu Arunachalam">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
@@ -34,10 +34,10 @@
                                 } ?>">
               <a class="nav-link" href="about.php">About</a>
             </li>
-            <li class="nav-item <?php if (basename($_SERVER['SCRIPT_FILENAME']) == 'blog.php' || basename($_SERVER['SCRIPT_FILENAME']) == 'details.php') {
+            <li class="nav-item <?php if (basename($_SERVER['SCRIPT_FILENAME']) == 'blogs.php' || basename($_SERVER['SCRIPT_FILENAME']) == 'details.php') {
                                   echo 'active';
                                 } ?>">
-              <a class="nav-link" href="blog.php">Blog</a>
+              <a class="nav-link" href="blogs.php">Blog</a>
             </li>
             <li class="nav-item <?php if (basename($_SERVER['SCRIPT_FILENAME']) == 'contact.php') {
                                   echo 'active';
